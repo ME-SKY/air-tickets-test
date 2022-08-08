@@ -26,16 +26,23 @@ function App() {
   const [tickets, setTickets] = useState<Ticket []>([]);
   const {innerWidth, innerHeight} = useWindowSizes();
 
+  const [{filterSpans, ticketsSpans}, setSpans] = useState({filterSpans: 6, ticketsSpans: 18})
+
   useEffect(() => {
     !tickets.length && Api.getTickets().then((data) => {
       setTickets(data);
     });
   })
 
+  useEffect(() => {
+    innerWidth < 1050 && setSpans({filterSpans: 8, ticketsSpans: 16});
+    innerWidth > 1050 && setSpans({filterSpans: 6, ticketsSpans: 18});
+  }, [innerWidth])
+
   return (
     <div className='App'>      
 
-      {/* <div className="dev-info">{innerWidth} / {innerHeight}</div> */}
+      <div className="dev-info">{innerWidth} / {innerHeight}</div>
 
       <Layout className='app-layout'>
         
@@ -47,14 +54,14 @@ function App() {
           <Content className='content'>
             <Row gutter={[16, 16]}>
               
-              <Col span={6}>
-                <Card className='filters-card' style={{}} bodyStyle={{padding: '16px 0px'}}>
+              <Col span={filterSpans}>
+                <Card className='filters-card' bodyStyle={{padding: '16px 0px'}}>
                   <Filters/>
                 </Card>  
               </Col>
               
-              <Col span={18}>
-                <Tickets tickets = {tickets} />
+              <Col span={ticketsSpans}>
+                <Tickets tickets={tickets} />
               </Col>
             
             </Row>

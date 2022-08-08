@@ -26,7 +26,7 @@ interface Ticket{
 
 interface TicketProps{
     ticket: Ticket,
-    currency?: CurrencyType   
+    currency: CurrencyType   
 }
 
 interface TicketsProps{

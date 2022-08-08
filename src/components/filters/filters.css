@@ -68,11 +68,31 @@
     border-color: #2296f3 !important;
 }
 
+.ant-checkbox + span{
+    white-space: nowrap;
+}
+
 .currency-radio-button{
     flex: 1 1 33%; 
     display: flex; 
     justify-content: center;
     align-items: center;
+}
+
+.currency > .ant-radio-group{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+
+}
+
+.currency > .ant-radio-group > .ant-radio-button-wrapper:first-child{
+    border-radius: 5px 0 0 5px;
+}
+
+.currency > .ant-radio-group > .ant-radio-button-wrapper:last-child{
+    border-radius: 0 5px 5px 0;
 }
 
 
