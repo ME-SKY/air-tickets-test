@@ -1,0 +1,128 @@
+.filters {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px
+}
+
+.filter-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.checkbox-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    min-height: 35px;
+    justify-content: space-between;
+}
+
+.checkbox-item:hover {
+    background: #e3f3f8;
+    transition: background-color 0.3s;
+}
+
+.this-checkbox-only{
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: bold;
+    background: transparent !important;
+    color: #35a0f4 !important;
+    pointer-events: none;
+    opacity: 0;
+    padding: 0;
+}
+
+
+.checkbox-item:hover .this-checkbox-only{
+    opacity: 1;
+    pointer-events: all;
+} 
+
+.filter-space {
+    width: 100%;
+    gap: 0 !important;
+}
+
+.transfers-filter > .filter-title {
+    padding-left: 16px;
+}
+
+.transfers  .checkbox-group {
+    display: flex;
+}
+
+.filter-space .checkbox-item {
+    padding: 0 16px !important;
+}
+
+.currency-filter{
+    padding: 0 16px;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: transparent;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner:after {
+    border-color: #2296f3 !important;
+}
+
+.currency-radio-button{
+    flex: 1 1 33%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 1670px) { 
+    .filter-title{
+        font-size: 0.8rem;
+    }
+
+    .checkbox-item label {
+        font-size: 0.8rem;
+    }
+
+    .this-checkbox-only{
+        font-size: 0.6rem;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 2000px) {
+    .currency-radio-button{
+        font-size: 1.35rem;
+        height: 3rem;
+    }
+
+    .filter-title{
+        font-size: 1.3rem;
+    }
+
+    .checkbox-item label {
+        font-size: 1.1rem;
+    }
+
+    .this-checkbox-only{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .checkbox-item{
+        min-height: 2.5rem;
+    }
+
+    .checkbox-item .ant-checkbox-inner{
+        width: 20px;
+        height: 20px;
+    }
+
+    .checkbox-item .ant-checkbox-inner:after{
+        top: 7px;
+        left: 4px;
+        width: 7px;
+        height: 13px;
+    } 
+}

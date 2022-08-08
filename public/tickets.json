@@ -1,0 +1,84 @@
+{
+    "tickets": [
+        {
+            "id": 1,
+            "logo": "some-logo-url.jpg",
+            "priceValue": "1234",
+            "arrivalDatetime": "2022-01-02T00:00:00.000Z",
+            "arrivalPlace": "Тель-Авив, TLV",
+            "departureDatetime": "2022-02-02T00:00:00.000Z",
+            "departurePlace": "VVO, Владивосток",
+            "transfersCount": 3
+        },
+        {
+            "id": 2,
+            "logo": "some-logo-url.jpg",
+            "priceValue": "1234",
+            "arrivalDatetime": "2022-01-02T00:00:00.000Z",
+            "arrivalPlace": "Тель-Авив, TLV",
+            "departureDatetime": "2022-02-02T00:00:00.000Z",
+            "departurePlace": "VVO, Владивосток",
+            "transfersCount": 0
+        },
+        {
+            "id": 3,
+            "logo": "some-logo-url.jpg",
+            "priceValue": "1234",
+            "arrivalDatetime": "2022-01-02T00:00:00.000Z",
+            "arrivalPlace": "Тель-Авив, TLV",
+            "departureDatetime": "2022-02-02T00:00:00.000Z",
+            "departurePlace": "VVO, Владивосток",
+            "transfersCount": 2
+        },
+        {
+            "id": 4,
+            "logo": "some-logo-url.jpg",
+            "priceValue": "1234",
+            "arrivalDatetime": "2022-01-02T00:00:00.000Z",
+            "arrivalPlace": "Тель-Авив, TLV",
+            "departureDatetime": "2022-02-02T00:00:00.000Z",
+            "departurePlace": "VVO, Владивосток",
+            "transfersCount": 1
+        },
+        {
+            "id": 5,
+            "logo": "some-logo-url.jpg",
+            "priceValue": "1234",
+            "arrivalDatetime": "2022-01-02T00:00:00.000Z",
+            "arrivalPlace": "Тель-Авив, TLV",
+            "departureDatetime": "2022-02-02T00:00:00.000Z",
+            "departurePlace": "VVO, Владивосток",
+            "transfersCount": 0
+        },
+        {
+            "id": 6,
+            "logo": "some-logo-url.jpg",
+            "priceValue": "1234",
+            "arrivalDatetime": "2022-01-02T00:00:00.000Z",
+            "arrivalPlace": "Тель-Авив, TLV",
+            "departureDatetime": "2022-02-02T00:00:00.000Z",
+            "departurePlace": "VVO, Владивосток",
+            "transfersCount": 1
+        },
+        {
+            "id": 7,
+            "logo": "some-logo-url.jpg",
+            "priceValue": "1234",
+            "arrivalDatetime": "2022-01-02T00:00:00.000Z",
+            "arrivalPlace": "Тель-Авив, TLV",
+            "departureDatetime": "2022-02-02T00:00:00.000Z",
+            "departurePlace": "VVO, Владивосток",
+            "transfersCount": 2
+        },
+        {
+            "id": 8,
+            "logo": "some-logo-url.jpg",
+            "priceValue": "1234",
+            "arrivalDatetime": "2022-01-02T00:00:00.000Z",
+            "arrivalPlace": "Тель-Авив, TLV",
+            "departureDatetime": "2022-02-02T00:00:00.000Z",
+            "departurePlace": "VVO, Владивосток",
+            "transfersCount": 0
+        }
+    ]
+}
