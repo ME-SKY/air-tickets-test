@@ -5,8 +5,7 @@ function getWindowSize() {
   return {innerWidth, innerHeight};
 }
 
-const useWindowSizes = () => { // todo make it more flexible, change call signature with window params that we wanna get, 
-  // for example useWindowInfo('innerWidth', 'innerHeight');
+const useWindowSizes = () => { 
 
   const [windowSizes, setWindowSizes] = useState(getWindowSize);
 

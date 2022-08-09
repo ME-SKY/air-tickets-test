@@ -9,7 +9,6 @@ import {Layout, Row, Col, Card} from 'antd';
 import { Ticket } from './types/types';
 import { FiltersProvider } from './contexts/filters-context';
 import useWindowSizes from './hooks/use-window-sizes';
-// import { ITicket } from './components/tickets/ticket/ticket';
 
 const {Header, Content} = Layout;
 
@@ -21,12 +20,17 @@ const headerStyles = {
   background: 'transparent'
 };
 
+const initialSpans = {
+  filterSpans: 6, 
+  ticketsSpans: 18
+}
+
 function App() {
 
   const [tickets, setTickets] = useState<Ticket []>([]);
   const {innerWidth, innerHeight} = useWindowSizes();
 
-  const [{filterSpans, ticketsSpans}, setSpans] = useState({filterSpans: 6, ticketsSpans: 18})
+  const [{filterSpans, ticketsSpans}, setSpans] = useState(initialSpans)
 
   useEffect(() => {
     !tickets.length && Api.getTickets().then((data) => {
@@ -35,14 +39,12 @@ function App() {
   })
 
   useEffect(() => {
-    innerWidth < 1050 && setSpans({filterSpans: 8, ticketsSpans: 16});
-    innerWidth > 1050 && setSpans({filterSpans: 6, ticketsSpans: 18});
-  }, [innerWidth])
+    (innerWidth < 1050 && filterSpans !== 8) && setSpans({filterSpans: 8, ticketsSpans: 16});
+    (innerWidth > 1050 && filterSpans !== 6) && setSpans({filterSpans: 6, ticketsSpans: 18});
+  }, [innerWidth, filterSpans])
 
   return (
     <div className='App'>      
-
-      <div className="dev-info">{innerWidth} / {innerHeight}</div>
 
       <Layout className='app-layout'>
         

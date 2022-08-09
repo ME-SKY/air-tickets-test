@@ -58,3 +58,10 @@ body{
     margin: 5% 12.5%;
   }
 }
+
+@media all and (-ms-high-contrast:none){
+  .App .filters-card{  /* disable sticky for ie browser */
+    position: relative ;
+    top: 0;
+  }
+}

@@ -5,6 +5,9 @@ function getFormattedDate(date: string): string {
     const year = dateObj.getFullYear();
     const weekDay = dateObj.toLocaleDateString(['ru-RU'], {weekday: 'short'})
 
+    // console.log('weekDay is', weekDay);
+    
+
     return `${dayNumber} ${month} ${year}, ${[weekDay[0].toUpperCase(), weekDay[1]].join('')}`
 }
 

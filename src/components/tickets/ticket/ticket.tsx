@@ -4,6 +4,7 @@ import { TicketProps } from "../../../types/types";
 import { getFormattedDate } from "../../../helpers/get-formatted-date";
 import { currencyFormatter } from "../../../helpers/currency-formatter";
 import './ticket.css'
+import getFormattedTime from "../../../helpers/get-formatted-time";
 
 function Ticket(props: TicketProps){
     const {currency, ticket} = props;
@@ -19,9 +20,6 @@ function Ticket(props: TicketProps){
         2: '2 пересадки',
         3: '3 пересадки'}[`${ticket.transfersCount}`];
 
-    const departureDatetime = new Date(ticket.departureDatetime);
-    const arrivalDatetime = new Date(ticket.arrivalDatetime);
-
     return (
         <Card className="ticket-card">
             <Card.Grid className="ticket-actions" hoverable={false} >
@@ -34,7 +32,7 @@ function Ticket(props: TicketProps){
             </Card.Grid>
             <Card.Grid className="ticket-info" hoverable={false} >
                 <div className="departure">
-                    <div className="time">{departureDatetime.toLocaleTimeString([],{timeStyle: 'short'})}</div>
+                    <div className="time">{getFormattedTime(ticket.departureDatetime)}</div>
                     <div className="place">{ticket.departurePlace}</div>
                     <div className="date">{getFormattedDate(ticket.departureDatetime)}</div>
                 </div>
@@ -46,7 +44,7 @@ function Ticket(props: TicketProps){
                     </div>
                 </div>
                 <div className="arrival">
-                    <div className="time">{arrivalDatetime.toLocaleTimeString([],{timeStyle: 'short'})}</div>
+                    <div className="time">{getFormattedTime(ticket.arrivalDatetime)}</div>
                     <div className="place">{ticket.arrivalPlace}</div>
                     <div className="date">{getFormattedDate(ticket.arrivalDatetime)}</div>
                 </div>
