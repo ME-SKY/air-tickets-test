@@ -28,7 +28,7 @@ const initialSpans = {
 function App() {
 
   const [tickets, setTickets] = useState<Ticket []>([]);
-  const {innerWidth, innerHeight} = useWindowSizes();
+  const {innerWidth} = useWindowSizes();
 
   const [{filterSpans, ticketsSpans}, setSpans] = useState(initialSpans)
 
